@@ -9,7 +9,7 @@ const app = {};
 
 app.listFlavors = (flavors) => {
     $.ajax({
-        url: `http://strainapi.evanbusse.com/7gizQS7/searchdata/flavors`,
+        url: `https://strainapi.evanbusse.com/7gizQS7/searchdata/flavors`,
         method: 'GET',
         dataTyle: 'json'
     }).then(function (flavors) {
@@ -49,7 +49,7 @@ app.getFlavorText = () => {
 
 app.getStrainFlavors = (selectedFlavor) => {
     $.ajax({
-        url: `http://strainapi.evanbusse.com/7gizQS7/strains/search/flavor/${selectedFlavor}`,
+        url: `https://strainapi.evanbusse.com/7gizQS7/strains/search/flavor/${selectedFlavor}`,
         method: 'GET',
         dataTyle: 'json'
     }).then(function (flavorResults) {
@@ -115,7 +115,7 @@ app.displayDescription = (strainDesc) => {
 // strain = strainID
 app.getDescription = (strain) => {
     $.ajax({
-        url: `http://strainapi.evanbusse.com/7gizQS7/strains/data/desc/${strain}`,
+        url: `https://strainapi.evanbusse.com/7gizQS7/strains/data/desc/${strain}`,
         method: 'GET',
         dataTyle: 'json'
     }).then(function (strainDesc) {
